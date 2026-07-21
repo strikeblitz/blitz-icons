@@ -1,0 +1,437 @@
+[
+  {
+    "name": "BiBrain",
+    "iconName": "brain",
+    "category": "ai"
+  },
+  {
+    "name": "BiChipAi",
+    "iconName": "chip-ai",
+    "category": "ai"
+  },
+  {
+    "name": "BiRobot",
+    "iconName": "robot",
+    "category": "ai"
+  },
+  {
+    "name": "BiSpark",
+    "iconName": "spark",
+    "category": "ai"
+  },
+  {
+    "name": "BiArrowDown",
+    "iconName": "arrow-down",
+    "category": "arrows"
+  },
+  {
+    "name": "BiArrowLeft",
+    "iconName": "arrow-left",
+    "category": "arrows"
+  },
+  {
+    "name": "BiArrowRight",
+    "iconName": "arrow-right",
+    "category": "arrows"
+  },
+  {
+    "name": "BiArrowUpRight",
+    "iconName": "arrow-up-right",
+    "category": "arrows"
+  },
+  {
+    "name": "BiArrowUp",
+    "iconName": "arrow-up",
+    "category": "arrows"
+  },
+  {
+    "name": "BiChevronDown",
+    "iconName": "chevron-down",
+    "category": "arrows"
+  },
+  {
+    "name": "BiChevronRight",
+    "iconName": "chevron-right",
+    "category": "arrows"
+  },
+  {
+    "name": "BiCornerUp",
+    "iconName": "corner-up",
+    "category": "arrows"
+  },
+  {
+    "name": "BiRefresh",
+    "iconName": "refresh",
+    "category": "arrows"
+  },
+  {
+    "name": "BiSend",
+    "iconName": "send",
+    "category": "arrows"
+  },
+  {
+    "name": "BiCart",
+    "iconName": "cart",
+    "category": "commerce"
+  },
+  {
+    "name": "BiCreditCard",
+    "iconName": "credit-card",
+    "category": "commerce"
+  },
+  {
+    "name": "BiGift",
+    "iconName": "gift",
+    "category": "commerce"
+  },
+  {
+    "name": "BiTag",
+    "iconName": "tag",
+    "category": "commerce"
+  },
+  {
+    "name": "BiWallet",
+    "iconName": "wallet",
+    "category": "commerce"
+  },
+  {
+    "name": "BiMail",
+    "iconName": "mail",
+    "category": "communication"
+  },
+  {
+    "name": "BiMessage",
+    "iconName": "message",
+    "category": "communication"
+  },
+  {
+    "name": "BiPhone",
+    "iconName": "phone",
+    "category": "communication"
+  },
+  {
+    "name": "BiShare",
+    "iconName": "share",
+    "category": "communication"
+  },
+  {
+    "name": "BiWifi",
+    "iconName": "wifi",
+    "category": "communication"
+  },
+  {
+    "name": "BiApi",
+    "iconName": "api",
+    "category": "dev"
+  },
+  {
+    "name": "BiBug",
+    "iconName": "bug",
+    "category": "dev"
+  },
+  {
+    "name": "BiCloud",
+    "iconName": "cloud",
+    "category": "dev"
+  },
+  {
+    "name": "BiCode",
+    "iconName": "code",
+    "category": "dev"
+  },
+  {
+    "name": "BiContainer",
+    "iconName": "container",
+    "category": "dev"
+  },
+  {
+    "name": "BiCpu",
+    "iconName": "cpu",
+    "category": "dev"
+  },
+  {
+    "name": "BiDatabase",
+    "iconName": "database",
+    "category": "dev"
+  },
+  {
+    "name": "BiGitBranch",
+    "iconName": "git-branch",
+    "category": "dev"
+  },
+  {
+    "name": "BiServer",
+    "iconName": "server",
+    "category": "dev"
+  },
+  {
+    "name": "BiTerminal",
+    "iconName": "terminal",
+    "category": "dev"
+  },
+  {
+    "name": "BiCopy",
+    "iconName": "copy",
+    "category": "files"
+  },
+  {
+    "name": "BiDownload",
+    "iconName": "download",
+    "category": "files"
+  },
+  {
+    "name": "BiEdit",
+    "iconName": "edit",
+    "category": "files"
+  },
+  {
+    "name": "BiFileCode",
+    "iconName": "file-code",
+    "category": "files"
+  },
+  {
+    "name": "BiFileText",
+    "iconName": "file-text",
+    "category": "files"
+  },
+  {
+    "name": "BiFile",
+    "iconName": "file",
+    "category": "files"
+  },
+  {
+    "name": "BiFolderOpen",
+    "iconName": "folder-open",
+    "category": "files"
+  },
+  {
+    "name": "BiFolder",
+    "iconName": "folder",
+    "category": "files"
+  },
+  {
+    "name": "BiTrash",
+    "iconName": "trash",
+    "category": "files"
+  },
+  {
+    "name": "BiUpload",
+    "iconName": "upload",
+    "category": "files"
+  },
+  {
+    "name": "BiBell",
+    "iconName": "bell",
+    "category": "interface"
+  },
+  {
+    "name": "BiBolt",
+    "iconName": "bolt",
+    "category": "interface"
+  },
+  {
+    "name": "BiBookmark",
+    "iconName": "bookmark",
+    "category": "interface"
+  },
+  {
+    "name": "BiCalendar",
+    "iconName": "calendar",
+    "category": "interface"
+  },
+  {
+    "name": "BiCheck",
+    "iconName": "check",
+    "category": "interface"
+  },
+  {
+    "name": "BiClock",
+    "iconName": "clock",
+    "category": "interface"
+  },
+  {
+    "name": "BiClose",
+    "iconName": "close",
+    "category": "interface"
+  },
+  {
+    "name": "BiEyeOff",
+    "iconName": "eye-off",
+    "category": "interface"
+  },
+  {
+    "name": "BiEye",
+    "iconName": "eye",
+    "category": "interface"
+  },
+  {
+    "name": "BiFilter",
+    "iconName": "filter",
+    "category": "interface"
+  },
+  {
+    "name": "BiGlobe",
+    "iconName": "globe",
+    "category": "interface"
+  },
+  {
+    "name": "BiGrid",
+    "iconName": "grid",
+    "category": "interface"
+  },
+  {
+    "name": "BiHeart",
+    "iconName": "heart",
+    "category": "interface"
+  },
+  {
+    "name": "BiLayers",
+    "iconName": "layers",
+    "category": "interface"
+  },
+  {
+    "name": "BiMapPin",
+    "iconName": "map-pin",
+    "category": "interface"
+  },
+  {
+    "name": "BiMenu",
+    "iconName": "menu",
+    "category": "interface"
+  },
+  {
+    "name": "BiMinus",
+    "iconName": "minus",
+    "category": "interface"
+  },
+  {
+    "name": "BiMoon",
+    "iconName": "moon",
+    "category": "interface"
+  },
+  {
+    "name": "BiPlus",
+    "iconName": "plus",
+    "category": "interface"
+  },
+  {
+    "name": "BiRocket",
+    "iconName": "rocket",
+    "category": "interface"
+  },
+  {
+    "name": "BiSearch",
+    "iconName": "search",
+    "category": "interface"
+  },
+  {
+    "name": "BiSettings",
+    "iconName": "settings",
+    "category": "interface"
+  },
+  {
+    "name": "BiSliders",
+    "iconName": "sliders",
+    "category": "interface"
+  },
+  {
+    "name": "BiStar",
+    "iconName": "star",
+    "category": "interface"
+  },
+  {
+    "name": "BiSun",
+    "iconName": "sun",
+    "category": "interface"
+  },
+  {
+    "name": "BiCamera",
+    "iconName": "camera",
+    "category": "media"
+  },
+  {
+    "name": "BiImage",
+    "iconName": "image",
+    "category": "media"
+  },
+  {
+    "name": "BiMic",
+    "iconName": "mic",
+    "category": "media"
+  },
+  {
+    "name": "BiPause",
+    "iconName": "pause",
+    "category": "media"
+  },
+  {
+    "name": "BiPlay",
+    "iconName": "play",
+    "category": "media"
+  },
+  {
+    "name": "BiVolume",
+    "iconName": "volume",
+    "category": "media"
+  },
+  {
+    "name": "BiFingerprint",
+    "iconName": "fingerprint",
+    "category": "security"
+  },
+  {
+    "name": "BiKey",
+    "iconName": "key",
+    "category": "security"
+  },
+  {
+    "name": "BiLock",
+    "iconName": "lock",
+    "category": "security"
+  },
+  {
+    "name": "BiShieldCheck",
+    "iconName": "shield-check",
+    "category": "security"
+  },
+  {
+    "name": "BiShield",
+    "iconName": "shield",
+    "category": "security"
+  },
+  {
+    "name": "BiUnlock",
+    "iconName": "unlock",
+    "category": "security"
+  },
+  {
+    "name": "BiLogin",
+    "iconName": "login",
+    "category": "users"
+  },
+  {
+    "name": "BiLogout",
+    "iconName": "logout",
+    "category": "users"
+  },
+  {
+    "name": "BiUserCheck",
+    "iconName": "user-check",
+    "category": "users"
+  },
+  {
+    "name": "BiUserPlus",
+    "iconName": "user-plus",
+    "category": "users"
+  },
+  {
+    "name": "BiUser",
+    "iconName": "user",
+    "category": "users"
+  },
+  {
+    "name": "BiUsers",
+    "iconName": "users",
+    "category": "users"
+  }
+]

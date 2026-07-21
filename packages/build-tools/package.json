@@ -1,0 +1,13 @@
+{
+  "name": "@blitz/build-tools",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Codegen pipeline that turns packages/icons-svg sources into framework components. Created by Blitz.",
+  "author": "Blitz",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "svgo": "^3.3.2",
+    "svgson": "^5.3.1"
+  }
+}

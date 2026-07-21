@@ -1,0 +1,55 @@
+{
+  "name": "@strikeblitz/icons-react",
+  "version": "0.1.0",
+  "description": "Blitz Icons for React \u2014 lightning-fast, tree-shakeable, futuristic icon components. Created by Blitz.",
+  "author": "Blitz",
+  "license": "MIT",
+  "homepage": "https://blitzicons.nett.to",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strikeblitz/blitz-icons.git",
+    "directory": "packages/icons-react"
+  },
+  "keywords": [
+    "icons",
+    "react",
+    "svg",
+    "icon-library",
+    "blitz-icons",
+    "typescript",
+    "design-system"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./icons/*": {
+      "types": "./dist/icons/*.d.ts",
+      "import": "./dist/icons/*.js",
+      "require": "./dist/icons/*.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "react": "^18.3.1",
+    "@types/react": "^18.3.12",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit"
+  }
+}

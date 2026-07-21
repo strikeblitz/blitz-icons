@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Blitz Icons — Lightning-fast icons for modern developers</title>
+<meta name="description" content="2,000-10,000+ beautifully crafted, futuristic icons designed by Blitz." />
+<style>
+  :root{
+    --bg:#0a0a0f; --bg-elev:#111118; --bg-card:#15151f; --border:#23232f;
+    --text:#f4f4f8; --text-dim:#9494a8; --accent:#6d5bff; --accent2:#00e5c7;
+    --grad: linear-gradient(135deg, #6d5bff, #00e5c7);
+    --radius:14px; --mono:'SF Mono',Consolas,Menlo,monospace;
+  }
+  [data-theme="light"]{
+    --bg:#f7f7fb; --bg-elev:#ffffff; --bg-card:#ffffff; --border:#e7e7f0;
+    --text:#121218; --text-dim:#63637a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;background:var(--bg);color:var(--text);transition:background .2s,color .2s}
+  header{padding:64px 24px 32px;text-align:center;max-width:900px;margin:0 auto}
+  .badge{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text-dim);border:1px solid var(--border);padding:6px 14px;border-radius:999px;margin-bottom:20px}
+  h1{font-size:clamp(32px,6vw,56px);margin:0 0 12px;line-height:1.05;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800;letter-spacing:-0.02em}
+  .sub{color:var(--text-dim);font-size:18px;margin:0 0 28px}
+  nav.top{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;font-size:14px}
+  nav.top a{color:var(--text-dim);text-decoration:none}
+  nav.top a:hover{color:var(--text)}
+  .theme-toggle{position:fixed;top:20px;right:20px;background:var(--bg-card);border:1px solid var(--border);border-radius:999px;padding:8px 12px;cursor:pointer;color:var(--text);font-size:13px;z-index:10}
+  .controls{max-width:1100px;margin:0 auto;padding:0 24px 20px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;position:sticky;top:0;background:var(--bg);z-index:5;padding-top:16px}
+  .search{flex:1;min-width:220px;background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--text);font-size:15px}
+  select,input[type=range]{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;color:var(--text);padding:10px 12px;font-size:14px}
+  .count{color:var(--text-dim);font-size:13px;white-space:nowrap}
+  .grid{max-width:1100px;margin:0 auto;padding:12px 24px 80px;display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px}
+  .cell{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 8px 10px;display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;transition:transform .12s, border-color .12s}
+  .cell:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .cell svg{width:26px;height:26px;stroke:var(--text)}
+  .cell .name{font-size:10.5px;color:var(--text-dim);text-align:center;word-break:break-word;line-height:1.3}
+  .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+  .modal-backdrop.open{display:flex}
+  .modal{background:var(--bg-elev);border:1px solid var(--border);border-radius:18px;max-width:520px;width:100%;padding:28px;max-height:88vh;overflow:auto}
+  .modal-preview{display:flex;align-items:center;justify-content:center;background:var(--bg-card);border-radius:14px;padding:32px;margin-bottom:20px}
+  .modal-preview svg{stroke:var(--previewColor,var(--text))}
+  .row{display:flex;gap:10px;align-items:center;margin-bottom:14px;font-size:13px;color:var(--text-dim)}
+  .row label{width:90px}
+  .row input[type=range]{flex:1}
+  .tabs{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap}
+  .tab{font-size:12px;padding:6px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-dim);cursor:pointer}
+  .tab.active{color:var(--text);border-color:var(--accent);background:rgba(109,91,255,.12)}
+  pre{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:14px;font-family:var(--mono);font-size:12.5px;overflow:auto;white-space:pre-wrap;word-break:break-all}
+  .copy-btn{background:var(--grad);color:#fff;border:none;border-radius:10px;padding:10px 16px;font-size:13px;font-weight:600;cursor:pointer;width:100%;margin-top:8px}
+  .close-btn{float:right;background:none;border:none;color:var(--text-dim);font-size:20px;cursor:pointer}
+  footer{text-align:center;padding:40px 20px;color:var(--text-dim);font-size:13px;border-top:1px solid var(--border)}
+  footer a{color:var(--accent2);text-decoration:none}
+</style>
+</head>
+<body data-theme="dark">
+<button class="theme-toggle" onclick="toggleTheme()">🌓 Theme</button>
+
+<header>
+  <div class="badge">⚡ Created by Blitz · <a href="https://t.me/blitz_core" style="color:inherit">@blitz_core</a></div>
+  <h1>Lightning-fast icons for modern developers.</h1>
+  <p class="sub">2,000–10,000+ beautifully crafted, futuristic icons designed by Blitz.</p>
+  <nav class="top">
+    <a href="https://github.com/strikeblitz/blitz-icons">GitHub</a>
+    <a href="https://www.npmjs.com/package/@strikeblitz/icons-react">npm</a>
+    <a href="https://github.com/strikeblitz/blitz-icons#readme">Documentation</a>
+    <a href="#">Playground</a>
+    <a href="https://github.com/strikeblitz/blitz-icons/blob/main/CHANGELOG.md">Changelog</a>
+    <a href="https://github.com/strikeblitz/blitz-icons/blob/main/ROADMAP.md">Roadmap</a>
+    <a href="https://github.com/strikeblitz/blitz-icons/blob/main/CONTRIBUTING.md">Contributing</a>
+    <a href="https://t.me/blitz_core">Telegram — @blitz_core</a>
+  </nav>
+</header>
+
+<div class="controls">
+  <input class="search" id="search" placeholder="Search icons… (e.g. rocket, folder, shield)" />
+  <select id="categoryFilter"><option value="">All categories</option></select>
+  <span class="count" id="count"></span>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<footer>
+  Blitz Icons — Created by Blitz · Open-source icon system · Community: <a href="https://t.me/blitz_core">@blitz_core</a>
+</footer>
+
+<div class="modal-backdrop" id="modalBackdrop" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="close-btn" onclick="closeModal()">×</button>
+    <h3 id="modalName" style="margin-top:0"></h3>
+    <div class="modal-preview"><div id="modalSvgWrap" style="width:64px;height:64px" ></div></div>
+    <div class="row"><label>Size</label><input type="range" id="ctrlSize" min="12" max="96" value="24"><span id="ctrlSizeVal">24px</span></div>
+    <div class="row"><label>Stroke</label><input type="range" id="ctrlStroke" min="0.5" max="3" step="0.05" value="1.75"><span id="ctrlStrokeVal">1.75</span></div>
+    <div class="row"><label>Color</label><input type="color" id="ctrlColor" value="#6d5bff"></div>
+    <div class="tabs">
+      <div class="tab active" data-fmt="svg">SVG</div>
+      <div class="tab" data-fmt="react">React</div>
+      <div class="tab" data-fmt="vue">Vue</div>
+      <div class="tab" data-fmt="svelte">Svelte</div>
+      <div class="tab" data-fmt="html">HTML</div>
+    </div>
+    <pre id="codeOut"></pre>
+    <button class="copy-btn" onclick="copyCode()">Copy code</button>
+  </div>
+</div>
+
+<script>
+let ICONS = [];
+let current = null;
+let fmt = "svg";
+
+function toggleTheme(){
+  const b = document.body;
+  b.dataset.theme = b.dataset.theme === "dark" ? "light" : "dark";
+}
+
+function withProps(svg, size, stroke, color){
+  return svg
+    .replace(/width="[^"]*"/, "")
+    .replace(/height="[^"]*"/, "")
+    .replace("<svg", `<svg width="${size}" height="${size}"`)
+    .replace(/stroke="[^"]*"/g, `stroke="${color}"`)
+    .replace(/stroke-width="[^"]*"/, "")
+    .replace("<svg", `<svg`)
+    .replace(/(<(path|circle|ellipse|rect)[^>]*)(\/?>)/g, (m, a, tag, close) => {
+      if (a.includes("stroke-width")) return m;
+      return `${a} stroke-width="${stroke}"${close}`;
+    });
+}
+
+function render(){
+  const q = document.getElementById("search").value.toLowerCase();
+  const cat = document.getElementById("categoryFilter").value;
+  const grid = document.getElementById("grid");
+  grid.innerHTML = "";
+  const filtered = ICONS.filter(i =>
+    (!q || i.slug.includes(q) || i.component.toLowerCase().includes(q)) &&
+    (!cat || i.category === cat)
+  );
+  document.getElementById("count").textContent = filtered.length + " icons";
+  for (const icon of filtered){
+    const cell = document.createElement("div");
+    cell.className = "cell";
+    cell.innerHTML = icon.svg + `<div class="name">${icon.component}</div>`;
+    cell.onclick = () => openModal(icon);
+    grid.appendChild(cell);
+  }
+}
+
+function openModal(icon){
+  current = icon;
+  document.getElementById("modalName").textContent = icon.component;
+  document.getElementById("modalBackdrop").classList.add("open");
+  updatePreview();
+}
+function closeModal(){ document.getElementById("modalBackdrop").classList.remove("open"); }
+
+function updatePreview(){
+  if(!current) return;
+  const size = document.getElementById("ctrlSize").value;
+  const stroke = document.getElementById("ctrlStroke").value;
+  const color = document.getElementById("ctrlColor").value;
+  document.getElementById("ctrlSizeVal").textContent = size + "px";
+  document.getElementById("ctrlStrokeVal").textContent = stroke;
+  const svgOut = withProps(current.svg, size, stroke, color);
+  document.getElementById("modalSvgWrap").innerHTML = svgOut;
+  document.getElementById("modalSvgWrap").style.width = size+"px";
+  document.getElementById("modalSvgWrap").style.height = size+"px";
+  renderCode(svgOut, size, stroke, color);
+}
+
+function renderCode(svgOut, size, stroke, color){
+  const name = current.component;
+  let code = "";
+  if (fmt === "svg") code = svgOut;
+  else if (fmt === "react") code = `import { ${name} } from "@strikeblitz/icons-react";\n\n<${name} size={${size}} strokeWidth={${stroke}} color="${color}" />`;
+  else if (fmt === "vue") code = `<script setup>\nimport { ${name} } from "@strikeblitz/icons-vue";\n</` + `script>\n\n<template>\n  <${name} :size="${size}" :stroke-width="${stroke}" color="${color}" />\n</template>`;
+  else if (fmt === "svelte") code = `<script>\n  import { ${name} } from "@strikeblitz/icons-svelte";\n</` + `script>\n\n<${name} size={${size}} strokeWidth={${stroke}} color="${color}" />`;
+  else if (fmt === "html") code = svgOut;
+  document.getElementById("codeOut").textContent = code;
+}
+
+function copyCode(){
+  const text = document.getElementById("codeOut").textContent;
+  navigator.clipboard?.writeText(text);
+}
+
+document.querySelectorAll(".tab").forEach(tab => {
+  tab.onclick = () => {
+    document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+    fmt = tab.dataset.fmt;
+    updatePreview();
+  };
+});
+
+["ctrlSize","ctrlStroke","ctrlColor"].forEach(id =>
+  document.getElementById(id).addEventListener("input", updatePreview)
+);
+document.getElementById("search").addEventListener("input", render);
+document.getElementById("categoryFilter").addEventListener("change", render);
+
+fetch("./icons-data.json")
+  .then(r => r.json())
+  .then(data => {
+    ICONS = data;
+    const cats = [...new Set(data.map(i => i.category))].sort();
+    const sel = document.getElementById("categoryFilter");
+    for (const c of cats){
+      const opt = document.createElement("option");
+      opt.value = c; opt.textContent = c[0].toUpperCase()+c.slice(1);
+      sel.appendChild(opt);
+    }
+    render();
+  })
+  .catch(() => {
+    document.getElementById("grid").innerHTML =
+      '<p style="color:var(--text-dim);grid-column:1/-1">Could not load icons-data.json — serve this folder with a local server (e.g. <code>npx serve apps/docs</code>) rather than opening the file directly.</p>';
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - name: Generate icon components from SVG sources
+        run: npm run build:icons
+      - name: Typecheck icons-react
+        run: npm run typecheck --workspace=@strikeblitz/icons-react
+      - name: Build icons-react
+        run: npm run build --workspace=@strikeblitz/icons-react

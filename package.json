@@ -1,0 +1,27 @@
+{
+  "name": "blitz-icons-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Blitz Icons \u2014 a modern, original, futuristic icon system. Created by Blitz.",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build:icons": "node packages/build-tools/src/generate.mjs",
+    "build": "npm run build:icons && npm run build --workspace=@strikeblitz/icons-react",
+    "lint:svg": "svgo -f packages/icons-svg/src -r -o packages/icons-svg/optimized"
+  },
+  "devDependencies": {
+    "svgo": "^3.3.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3"
+  },
+  "license": "MIT",
+  "author": "Blitz",
+  "homepage": "https://blitzicons.nett.to",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strikeblitz/blitz-icons.git"
+  }
+}
