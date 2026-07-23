@@ -1,8 +1,6 @@
 name: Publish to npm
 
 on:
-  release:
-    types: [published]
   workflow_dispatch:
     inputs:
       confirm:
@@ -15,7 +13,7 @@ permissions:
 
 jobs:
   publish:
-    if: github.event_name == 'release' || github.event.inputs.confirm == 'publish'
+    if: github.event.inputs.confirm == 'publish'
     runs-on: ubuntu-latest
 
     steps:
