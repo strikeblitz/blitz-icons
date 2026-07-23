@@ -114,18 +114,17 @@ function toggleTheme(){
   b.dataset.theme = b.dataset.theme === "dark" ? "light" : "dark";
 }
 
-function withProps(svg, size, stroke, color){
-  return svg
-    .replace(/width="[^"]*"/, "")
-    .replace(/height="[^"]*"/, "")
-    .replace("<svg", `<svg width="${size}" height="${size}"`)
-    .replace(/stroke="[^"]*"/g, `stroke="${color}"`)
-    .replace(/stroke-width="[^"]*"/, "")
-    .replace("<svg", `<svg`)
-    .replace(/(<(path|circle|ellipse|rect)[^>]*)(\/?>)/g, (m, a, tag, close) => {
-      if (a.includes("stroke-width")) return m;
-      return `${a} stroke-width="${stroke}"${close}`;
-    });
+function buildStyledSvg(svgString, size, stroke, color){
+  const doc = new DOMParser().parseFromString(svgString, "image/svg+xml");
+  const svg = doc.documentElement;
+  svg.setAttribute("width", String(size));
+  svg.setAttribute("height", String(size));
+  svg.querySelectorAll("*").forEach((el) => {
+    if (el.hasAttribute("stroke")) el.setAttribute("stroke", color);
+    if (el.hasAttribute("stroke-width")) el.setAttribute("stroke-width", String(stroke));
+    if (el.getAttribute("fill") === "currentColor") el.setAttribute("fill", color);
+  });
+  return svg;
 }
 
 function render(){
@@ -162,10 +161,15 @@ function updatePreview(){
   const color = document.getElementById("ctrlColor").value;
   document.getElementById("ctrlSizeVal").textContent = size + "px";
   document.getElementById("ctrlStrokeVal").textContent = stroke;
-  const svgOut = withProps(current.svg, size, stroke, color);
-  document.getElementById("modalSvgWrap").innerHTML = svgOut;
-  document.getElementById("modalSvgWrap").style.width = size+"px";
-  document.getElementById("modalSvgWrap").style.height = size+"px";
+
+  const styledSvg = buildStyledSvg(current.svg, size, stroke, color);
+  const wrap = document.getElementById("modalSvgWrap");
+  wrap.innerHTML = "";
+  wrap.appendChild(styledSvg);
+  wrap.style.width = size + "px";
+  wrap.style.height = size + "px";
+
+  const svgOut = new XMLSerializer().serializeToString(styledSvg);
   renderCode(svgOut, size, stroke, color);
 }
 
@@ -174,8 +178,8 @@ function renderCode(svgOut, size, stroke, color){
   let code = "";
   if (fmt === "svg") code = svgOut;
   else if (fmt === "react") code = `import { ${name} } from "blitz-icons";\n\n<${name} size={${size}} strokeWidth={${stroke}} color="${color}" />`;
-  else if (fmt === "vue") code = `<script setup>\nimport { ${name} } from "@strikeblitz/icons-vue";\n</` + `script>\n\n<template>\n  <${name} :size="${size}" :stroke-width="${stroke}" color="${color}" />\n</template>`;
-  else if (fmt === "svelte") code = `<script>\n  import { ${name} } from "@strikeblitz/icons-svelte";\n</` + `script>\n\n<${name} size={${size}} strokeWidth={${stroke}} color="${color}" />`;
+  else if (fmt === "vue") code = `<script setup>\nimport { ${name} } from "blitz-icons-vue";\n</` + `script>\n\n<template>\n  <${name} :size="${size}" :stroke-width="${stroke}" color="${color}" />\n</template>`;
+  else if (fmt === "svelte") code = `<script>\n  import { ${name} } from "blitz-icons-svelte";\n</` + `script>\n\n<${name} size={${size}} strokeWidth={${stroke}} color="${color}" />`;
   else if (fmt === "html") code = svgOut;
   document.getElementById("codeOut").textContent = code;
 }
