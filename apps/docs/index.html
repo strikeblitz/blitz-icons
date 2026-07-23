@@ -115,8 +115,9 @@ function toggleTheme(){
 }
 
 function buildStyledSvg(svgString, size, stroke, color){
-  const doc = new DOMParser().parseFromString(svgString, "image/svg+xml");
-  const svg = doc.documentElement;
+  const container = document.createElement("div");
+  container.innerHTML = svgString;
+  const svg = container.querySelector("svg");
   svg.setAttribute("width", String(size));
   svg.setAttribute("height", String(size));
   svg.querySelectorAll("*").forEach((el) => {
