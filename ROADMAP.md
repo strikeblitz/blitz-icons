@@ -7,7 +7,7 @@ Blitz Icons — Created by Blitz · Community: [@blitz_core](https://t.me/blitz_
 - [x] Monorepo architecture (`packages/icons-svg`, `packages/icons-react`, `packages/build-tools`, `apps/docs`)
 - [x] Codegen pipeline: SVG source → SVGO optimization → AST → TSX components
 - [x] 87 original seed icons across 10 categories (Interface, Arrows, Files, Users, Dev, AI, Communication, Media, Security, Commerce)
-- [x] `@strikeblitz/icons-react` with full prop API (`size`, `color`, `strokeWidth`, `absoluteStrokeWidth`, `className`, `style`, `title`, ref forwarding), ESM+CJS+d.ts build, per-icon tree-shakeable entry points
+- [x] `blitz-icons` with full prop API (`size`, `color`, `strokeWidth`, `absoluteStrokeWidth`, `className`, `style`, `title`, ref forwarding), ESM+CJS+d.ts build, per-icon tree-shakeable entry points
 - [x] Interactive docs/playground demo (search, category filter, size/stroke/color controls, multi-framework code copy, dark mode)
 - [x] Contribution guidelines and design conventions documented
 
@@ -48,7 +48,7 @@ Same `icons-svg` source of truth, new codegen targets:
 ## v1.0 — Production-grade release (target: 2,000+ icons)
 
 - [ ] 2,000+ icons across all launch categories, Outline + Filled variants complete
-- [ ] Stable semver, published `@strikeblitz/icons-react` v1.0.0 on npm
+- [ ] Stable semver, published `blitz-icons` v1.0.0 on npm
 - [ ] Full accessibility audit (screen reader pass on interactive docs site)
 - [ ] Brand icons category (with clear usage/trademark guidance)
 - [ ] Community contribution pipeline live (external PRs reviewed against `CONTRIBUTING.md` conventions)

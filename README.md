@@ -18,13 +18,13 @@ Every icon is 100% original artwork, built from primitives (paths, circles, rect
 ## Install
 
 ```bash
-npm install @strikeblitz/icons-react
+npm install blitz-icons
 ```
 
 ## Usage
 
 ```tsx
-import { BiHome, BiSearch, BiRocket } from "@strikeblitz/icons-react";
+import { BiHome, BiSearch, BiRocket } from "blitz-icons";
 
 function App() {
   return (
@@ -58,7 +58,7 @@ All standard `SVGProps` (`onClick`, `data-*`, etc.) are also accepted and spread
 blitz-icons/
 ├─ packages/
 │  ├─ icons-svg/        # Source of truth: raw, hand-authored SVGs by category
-│  ├─ icons-react/       # Generated React components (published as @strikeblitz/icons-react)
+│  ├─ icons-react/       # Generated React components (published as blitz-icons)
 │  └─ build-tools/       # Codegen pipeline: SVG → optimized SVG → TSX components
 ├─ apps/
 │  └─ docs/               # Interactive documentation / icon playground
@@ -71,7 +71,7 @@ blitz-icons/
 
 ```bash
 npm run build:icons   # packages/icons-svg/src/**/*.svg → packages/icons-react/src/icons/*.tsx
-npm run build         # also compiles @strikeblitz/icons-react to dist/ (ESM + CJS + .d.ts)
+npm run build         # also compiles blitz-icons to dist/ (ESM + CJS + .d.ts)
 ```
 
 `packages/build-tools/src/generate.mjs` is the single source of truth for codegen. It:
@@ -86,7 +86,7 @@ This is what makes scaling from dozens to thousands of icons tractable: adding a
 
 ### Package build
 
-`@strikeblitz/icons-react` is bundled with `tsup` into:
+`blitz-icons` is bundled with `tsup` into:
 - ESM + CJS output
 - Full `.d.ts` type declarations
 - **A separate entry point per icon** (`dist/icons/BiRocket.js`, etc.) so bundlers tree-shake down to exactly the icons a consumer imports — critical at 10,000+ icon scale. A single icon import resolves to well under 1KB plus one small shared runtime chunk.
@@ -95,7 +95,7 @@ This is what makes scaling from dozens to thousands of icons tractable: adding a
 
 | Package | Status |
 |---|---|
-| `@strikeblitz/icons-react` | ✅ Implemented in this repo |
+| `blitz-icons` | ✅ Implemented in this repo |
 | `@strikeblitz/icons-vue` | 🗺️ Roadmapped — same codegen pipeline, Vue SFC template target |
 | `@strikeblitz/icons-svelte` | 🗺️ Roadmapped |
 | `@strikeblitz/icons-angular` | 🗺️ Roadmapped |

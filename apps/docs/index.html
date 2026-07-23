@@ -62,7 +62,7 @@
   <p class="sub">2,000–10,000+ beautifully crafted, futuristic icons designed by Blitz.</p>
   <nav class="top">
     <a href="https://github.com/strikeblitz/blitz-icons">GitHub</a>
-    <a href="https://www.npmjs.com/package/@strikeblitz/icons-react">npm</a>
+    <a href="https://www.npmjs.com/package/blitz-icons">npm</a>
     <a href="https://github.com/strikeblitz/blitz-icons#readme">Documentation</a>
     <a href="#">Playground</a>
     <a href="https://github.com/strikeblitz/blitz-icons/blob/main/CHANGELOG.md">Changelog</a>
@@ -173,7 +173,7 @@ function renderCode(svgOut, size, stroke, color){
   const name = current.component;
   let code = "";
   if (fmt === "svg") code = svgOut;
-  else if (fmt === "react") code = `import { ${name} } from "@strikeblitz/icons-react";\n\n<${name} size={${size}} strokeWidth={${stroke}} color="${color}" />`;
+  else if (fmt === "react") code = `import { ${name} } from "blitz-icons";\n\n<${name} size={${size}} strokeWidth={${stroke}} color="${color}" />`;
   else if (fmt === "vue") code = `<script setup>\nimport { ${name} } from "@strikeblitz/icons-vue";\n</` + `script>\n\n<template>\n  <${name} :size="${size}" :stroke-width="${stroke}" color="${color}" />\n</template>`;
   else if (fmt === "svelte") code = `<script>\n  import { ${name} } from "@strikeblitz/icons-svelte";\n</` + `script>\n\n<${name} size={${size}} strokeWidth={${stroke}} color="${color}" />`;
   else if (fmt === "html") code = svgOut;

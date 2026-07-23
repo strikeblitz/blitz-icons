@@ -17,6 +17,6 @@ jobs:
       - name: Generate icon components from SVG sources
         run: npm run build:icons
       - name: Typecheck icons-react
-        run: npm run typecheck --workspace=@strikeblitz/icons-react
+        run: npm run typecheck --workspace=blitz-icons
       - name: Build icons-react
-        run: npm run build --workspace=@strikeblitz/icons-react
+        run: npm run build --workspace=blitz-icons

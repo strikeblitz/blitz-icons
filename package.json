@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build:icons": "node packages/build-tools/src/generate.mjs",
-    "build": "npm run build:icons && npm run build --workspace=@strikeblitz/icons-react",
+    "build": "npm run build:icons && npm run build --workspace=blitz-icons",
     "lint:svg": "svgo -f packages/icons-svg/src -r -o packages/icons-svg/optimized"
   },
   "devDependencies": {
