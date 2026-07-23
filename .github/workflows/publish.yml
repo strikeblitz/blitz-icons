@@ -3,12 +3,19 @@ name: Publish to npm
 on:
   release:
     types: [published]
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type "publish" to confirm manual publish to npm'
+        required: true
+        default: ""
 
 permissions:
   contents: read
 
 jobs:
   publish:
+    if: github.event_name == 'release' || github.event.inputs.confirm == 'publish'
     runs-on: ubuntu-latest
 
     steps:
@@ -23,6 +30,12 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Regenerate icon components from SVG sources
+        run: npm run build:icons
+
+      - name: Typecheck
+        run: npm run typecheck --workspace=blitz-icons
 
       - name: Build package
         run: npm run build --workspace=blitz-icons
